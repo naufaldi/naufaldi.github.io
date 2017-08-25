@@ -2,259 +2,355 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Bootstrap Portfolio Template developed ">
-    <meta name="author" content="Mostafiz">
-    <title>Naufaldi | Front End Developer</title>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Naufaldi Rafif S</title>
+
+    <!--Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/full-width-pics.css" rel="stylesheet">
+     <!-- Bootstrap Core JavaScript -->
+       <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <!-- jQuery -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script> -->
+
+    <!-- Custom JS -->
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script>
+        // function checkScroll(){
+        //     var startY =$('.navbar').height()* 2;
+        //     if($(window).scrollTop()> startY){
+        //         $('.navbar').addClass("scrolled");
+        //     } else{
+        //         $('.navbar').removeClass('scrolled');
+        //     }
+        // }
+        // if($('.navbar').length> 0 ){
+        //     $(window).on("scroll load resize", function(){
+        //         checkScroll();
+        //     });
+        // }
+        $(window).scroll(function(){
+            if($(window).scrollTop()>=50){
+                $('.navbar-inverse').addClass('scrolled');
+            }else {
+                $('.navbar-inverse').removeClass('scrolled');
+            }
+        });
+    $(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  },
+    		  load: {
+      		  filter: '.app, .javascript, .landing-page, .sistem'  
+      		}     
+				});								
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+    </script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
-    <!-- ====================================================
-	header section -->
-    <header class="top-header">
-        <div class="container">
-            <div class="row header-row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-default">
-                        <a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
-                        <div class="container-fluid">
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="#sec1">Home</a></li>
-                                    <li><a href="#sec2">About</a></li>
-                                    <li><a href="#sec3">Services</a></li>
-                                    <li><a href="#sec4">My Work</a></li>
-                                    <li><a href="#sec5">Contact Me</a></li>
-                                </ul>
-                            </div>
-                            <!-- /.navbar-collapse -->
-                        </div>
-                        <!-- /.container-fluid -->
-                    </nav>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">NRS</a>
             </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">Skill</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li>    
+                        <a href="https://naufaldi.behato.org/">CV</a>
+                    </li>
+                    <li>
+                        <a href="behato.org">Behato</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header with Logo -->
+    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+    <header class="image-bg-fixed-height " id="home">
+        <div class="content-header">
+            <img class="img-responsive img-center img-thumbnail" src="image/header-logo.JPG" alt="" width="200" height="200">
+            <h3>Naufaldi Rafif Satriya</h3>
+            <p>Hello! I am Front End Engineer</p>
+        <a href="#contact" class="btn btn-success">Hire Me!</a>
+        <a href="#about" class="btn btn-success">Know Me!</a>
         </div>
     </header>
 
-    <!-- banner area starts here -->
-    <section class="banner text-center" id="sec1">
-        <div class="container">
+    <!-- Content Section -->
+    <section id="about" >
+        <div class="container " >
             <div class="row">
-            <h3></h3>
-                <h1>Naufaldi Rafif S</h1>
-
-                <p>Front End Developer </p>
-
-                <img src="img/pin.png" alt="">
-                <br>
-
-                <button class="know-more">KNOW MORE</button>
-            </div>
-        </div>
-    </section>
-    <!-- end of banner section -->
-
-    <!-- about section -->
-    <section class="about text-center" id="sec2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 about-heading">
-                    <h2>
-						ABOUT ME
-					</h2>
-                    <img src="img/daag.png" alt="">
-
-                    <p>I am a student of class 2014 of UIN Maulana Malik Ibrahim Malang. A front end developer and project manager in Batavia Hack Town for now. I am also actively contribute to the development of open source projects that can be seen in <a href="https://github.com/naufaldi"> mygithub </a> and is currently focused on startup  <a href="behato.org"> Batavia Hack Town</a>  and developing the Open Source community on campus with names UINBuntu </p>
+                <h1 class="section-heading line-side"><span>  ABOUT  </span></h1>
+                <div class="col-lg-6">                    
+                    <img src="image/about-logo.JPG" alt="" class="img-responsive img-center img-circle" width="200px" height="200px">
+                    <blockquote cite="">
+                    <p>
+                       I am a student of class 2014 of UIN Maulana Malik Ibrahim Malang. 
+                        A front end developer and project manager in Batavia Hack Town for now. 
+                        I am also actively contribute to the development of open source projects that can be seen in mygithub and is currently 
+                        focused on startup Batavia Hack Town and developing the Open Source community on campus with names UINBuntu    
+                    </p> 
+                    </blockquote>
                 </div>
-
-               
-            </div>
-        </div>
-    </section>
-    <!-- end of about section -->
-
-    <!-- service section -->
-
-    <section class="service text-left" id="sec3">
-        <div class="container">
-            <div class="row">
-                <div class="service-overlay"></div>
-                <div class="col-md-12">
-                    <h2>SKILL</h2>
-                    <img src="img/daag.png" alt="">
-                </div>
-                <div class="col-md-6 services">
-                    <div class="col-md-12 single-service col-xs-12 col-sm-12 ">
-                        <h3>CSS3</h3>
-                           <div class="progress">
-                              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                <span class="sr-only">60% Complete (success)</span>
-                              </div>
-                        </div>
+                <div class="col-lg-6">
+                    <h2 class="center" style="padding-bottom:20px;">Skill</h2>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> 
+                            <span class="sr-only">60%</span>
+                            </div>
+                        <span class="progress-type">HTML/HTML5</span>
+                        <span class="progress-completed">60%</span>
                     </div>
-                    <div class="col-md-12 single-service col-xs-12 col-sm-12">
-                        <h3>HTML5</h3>
-                           <div class="progress">
-                              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                <span class="sr-only">70% Complete (success)</span>
-                              </div>
-                        </div>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> 
+                            <span class="sr-only">60%</span>
+                            </div>
+                        <span class="progress-type">CSS/CSS3</span>
+                        <span class="progress-completed">60%</span>
                     </div>
-                    <div class="col-md-12 single-service col-xs-12 col-sm-12">
-                        <h3>JAVASCRIPT</h3>
-                           <div class="progress">
-                              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                <span class="sr-only">40% Complete (success)</span>
-                              </div>
-                        </div>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;"> 
+                            <span class="sr-only">50%</span>
+                            </div>
+                        <span class="progress-type">JavaScript</span>
+                        <span class="progress-completed">50%</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- about section ends -->
-
-    <!-- portfolio section -->
-
-    <section class="portfolio text-center" id="sec4">
-        <div class="row portfolio-row">
-            <div class="portfolio-heading">
-                <h2>MY WORK</h2>
-                <img src="img/daag.png" alt="">
-            </div>
-
-            <div class="col-md-3 single-portfolio col-sm-6">
-                <figure class="portfolio-item">
-                    <img class="img-responsive" src="img/portfolio.jpg" alt="">
-                    <figcaption class="portfolio-details">
-                        <h4>Landing Page Y2Get!</h4>
-                        <p> Landing Page for A chrome extension for give user new experiense for newsfeed or newsletter in her browser.</p>
-                    </figcaption>
-                </figure>
-               
-            </div>
-
-            <div class="col-md-3 single-portfolio col-sm-6">
-                <figure class="portfolio-item">
-                    <img class="img-responsive" src="img/portfolio2.jpg" alt="">
-                    <figcaption class="portfolio-details">
-                        <h4>Website ICT 2016</h4>
-                        <p>A comprehensive website for ICT Competition in UIN Malang by HMJ TIF 2015 .</p>
-                    </figcaption>
-                </figure>
-                
-            </div>
-
-            <div class="col-md-3 single-portfolio col-sm-6">
-                <figure class="portfolio-item">
-                    <img class="img-responsive" src="img/portfolio3.jpg" alt="">
-                    <figcaption class="portfolio-details">
-                        <h4>Landing Page Eth0 Community</h4>
-                        <p>onsectetur adipisicing elit, sedo eiusmod tempor incidi et dolorerserss eerhfre mag.</p>
-                    </figcaption>
-                </figure>
-             
-            </div>
-
-            <div class="col-md-3 single-portfolio col-sm-6">
-                <figure class="portfolio-item">
-                    <img class="img-responsive" src="img/portfolio4.jpg" alt="">
-                    <figcaption class="portfolio-details">
-                        <h4>Landing Page Ikan Koi</h4>
-                        <p>A landing page responsive website a for promote Berlian Ikan Koi</p>
-                    </figcaption>
-                </figure>
-              
-            </div>
-
-            <div class="col-md-3 single-portfolio col-sm-6">
-                <figure class="portfolio-item">
-                    <img class="img-responsive" src="img/portfolio5.jpg" alt="">
-                    <figcaption class="portfolio-details">
-                        <h4>Landing Page Zero Dota Store</h4>
-                        <p>A landing page responsive website a for promote Online Shop Game. </p>
-                    </figcaption>
-                </figure>
-               
-            </div>
-
-            <div class="col-md-3 single-portfolio col-sm-6">
-                <figure class="portfolio-item">
-                    <img class="img-responsive" src="img/portfolio6.jpg" alt="">
-                    <figcaption class="portfolio-details">
-                        <h4>Landing Page Pakupulo </h4>
-                        <p>A landing page responsive website a for Pakupulo TNI Apps from Batavia Hack Town</p>
-                    </figcaption>
-                </figure>
-                
-            </div>
-        </div>
-    </section>
-    <!-- end of portfolio section -->
-
-    <section class="contact text-center" id="sec5">
-        <div class="container">
-            <div class="row">
-                <article class="contact-heading">
-                    <h2>CONTACT ME</h2>
-                    <img src="img/daag.png" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                        <br> ut labore et dolore magna aliqua.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-    <!-- end of contact section -->
-
-    <section class="contact-form">
-        <div class="container">
-            <div class="row">
-                <div class="form">
-                    <form action="contact.php">
-                        <div class="sbtn col-md-12 text-center">
-                            <input class="name form-input" type="text" placeholder="NAME">
-                            <input class="email form-input" type="email" placeholder="EMAIL">
-                            <input class="message form-input" type="text" placeholder="MASSAGE">
-                            <input class="submit-btn" type="submit">
-                        </div>
-                    </form>
+                     <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%;"> 
+                            <span class="sr-only">40%</span>
+                            </div>
+                        <span class="progress-type">Jquery</span>
+                        <span class="progress-completed">40%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%;"> 
+                            <span class="sr-only">30%</span>
+                            </div>
+                        <span class="progress-type">React</span>
+                        <span class="progress-completed">30%</span>
+                    </div>
+                    
+                   
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- footer starts here -->
-    <footer class="footer text-center">
-        <p>Copyright: &copy; <a href="http://mostafiz.me">mostafiz</a> | All rights reserved</p>
+       <!-- Content Section -->
+    <section id="portfolio">
+    	<div class="container">
+            <h1 class="section-heading line-side"><span>Portfolio</span></h1>
+            <div class="header-bar"></div>
+		<ul id="filters" class="clearfix">
+			<li><span class="filter active" data-filter=".app, .javascript, .landing-page, .sistem">All</span></li>
+			<li><span class="filter" data-filter=".app">App</span></li>
+			<li><span class="filter" data-filter=".sap">SAP</span></li>
+			<li><span class="filter" data-filter=".landing-page">Landing Page</span></li>
+			<li><span class="filter" data-filter=".logo">Logo</span></li>
+			<li><span class="filter" data-filter=".web">Web</span></li>
+		</ul>
+
+		<div id="portfoliolist">
+			
+			<div class="portfolio logo" data-cat="logo">
+				<div class="portfolio-wrapper">				
+					<img src="image/200.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Bird Document</a>
+							<span class="text-category">Logo</span>
+						</div>
+						<div class="label-bg">Lorem Ipsum</div>
+					</div>
+				</div>
+			</div>				
+
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">			
+					<img src="image/200.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Visual Infography</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">						
+					<img src="image/200.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Sonor's Design</a>
+							<span class="text-category">Web design</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+			<div class="portfolio sap" data-cat="sap">
+				<div class="portfolio-wrapper">			
+					<img src="image/200.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Typography Company</a>
+							<span class="text-category">Business sap</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+						
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">
+					<img src="image/200.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Weatherette</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="portfolio sap" data-cat="sap">
+				<div class="portfolio-wrapper">			
+					<img src="image/200.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">BMF</a>
+							<span class="text-category">Business sap</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio sap" data-cat="sap">
+				<div class="portfolio-wrapper">			
+					<img src="image/200.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Techlion</a>
+							<span class="text-category">Business sap</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+					
+			
+		</div>
+		
+	</div><!-- container -->
+
+        <!-- /.container -->
+    </section>
+
+      <!-- Contact us Section -->
+    <section id="contact" class="bg-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="section-heading line-side"><span>Contact</span></h1>
+                    <p class="lead section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Naufaldi 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
     </footer>
 
-    <!-- script tags
-	============================================================= -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
+    
+   
+
 </body>
 
 </html>
