@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Cell} from 'react-mdl';
 import Cardlanding from './card-landing'
+import CardName from './cardName';
 
 class Landingpage extends Component {
   render () {
@@ -8,7 +9,7 @@ class Landingpage extends Component {
       <div style={{width: '100%', margin:'auto'}} >
       <Grid className="landing-grid" >
         <Cell col={12} className="flex flex-align">
-         <Cardlanding />
+         <CardName />
         </Cell>
       </Grid>
       </div>
