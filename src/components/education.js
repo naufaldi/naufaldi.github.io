@@ -5,7 +5,7 @@ class education extends Component {
     return (
       <div>
         <h1>{this.props.thisYear}</h1>
-
+        <p> lorem </p>
       </div>
     )
   }
