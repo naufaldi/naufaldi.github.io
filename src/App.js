@@ -9,23 +9,15 @@ class App extends Component {
     return (
       <div className="demo-big-content">
       <Layout>
-          <Header className="header-color" title="React Website" scroll>
+          <Header className="header-color" title="NRS" scroll>
               <Navigation>
-              <Link to="/">Home</Link>
-                  <Link to="/resume">Resume</Link>
-                  <Link to="/aboutme">Aboutme</Link>
-                  <Link to="/projects">Project</Link>
-                  <Link to="/contact">Contact</Link>
+              <Link to="/" className="link-swipe" >Home</Link>
+                  <Link to="/resume" className="link-swipe">Resume</Link>
+                  <Link to="/aboutme" className="link-swipe">Aboutme</Link>
+                  <Link to="/projects "className="link-swipe">Project</Link>
+                  <Link to="/contact" className="link-swipe">Contact</Link>
               </Navigation>
           </Header>
-          <Drawer title="React Website">
-              <Navigation>
-              <Link to="/resume">Resume</Link>
-              <Link to="/aboutme">Aboutme</Link>
-              <Link to="/projects">Project</Link>
-              <Link to="/contact">Contact</Link>
-              </Navigation>
-          </Drawer>
           <Content>
               <div className="page-content" />
               <Main/>
