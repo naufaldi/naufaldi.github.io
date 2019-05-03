@@ -6,6 +6,9 @@ const teamStyle = {
     padding: "70px 0",
     textAlign: "center"
   },
+  cardSize: {
+    height: "31.25rem"
+  },
   title: {
     ...title,
     marginBottom: "1rem",
@@ -41,6 +44,9 @@ const teamStyle = {
   },
   margin5: {
     margin: "5px"
+  },
+  cardFooter:{
+    justifyContent: "center !important"
   }
 };
 
