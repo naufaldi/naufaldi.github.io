@@ -4,13 +4,9 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
-import Camera from "@material-ui/icons/Camera";
-import Palette from "@material-ui/icons/Palette";
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
-import Button from "components/CustomButtons/Button.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
@@ -63,10 +59,7 @@ class ProfilePage extends React.Component {
               </GridContainer>
               <div className={classes.description}>
                 <p>
-                  An artist of considerable range, Chet Faker — the name taken
-                  by Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure.{" "}
+                  Special human with some ability to love learning and working on teamwork. Getting Buff +1 for Learning, Buff +2 for documentation and More buff on managing team.Exicited on React and Agile Development, especially about Scrum Metodhology. {" "}
                 </p>
               </div>
               <SkillSection/>
