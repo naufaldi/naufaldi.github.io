@@ -175,6 +175,42 @@ class ProjectSection extends React.Component {
 								</CardFooter>
 							</Card>
 						</GridItem>
+						<GridItem xs={12} sm={6} md={3}>
+							<Card className={classes.cardSize}>
+								<img className={classes.imgCardTop} src={card1} alt="Card-img-cap" />
+								<CardBody>
+									<h4 className={classes.cardTitle}>Blog Nugra</h4>
+									<p>Deploy, Design for Personal Blog</p>
+								</CardBody>
+								<CardFooter className={classes.cardFooter}>
+									<Button color="info" size="sm" href="#" target="_blank" disabled>
+										Github
+									</Button>
+									<Button color="primary" size="sm" href="http://nu-jurnal.web.id" target="_blank">
+										{' '}
+										Demo
+									</Button>
+								</CardFooter>
+							</Card>
+						</GridItem>
+						<GridItem xs={12} sm={6} md={3}>
+							<Card className={classes.cardSize}>
+								<img className={classes.imgCardTop} src={card1} alt="Card-img-cap" />
+								<CardBody>
+									<h4 className={classes.cardTitle}>Blog Nugra</h4>
+									<p>Deploy, Design for Personal Blog</p>
+								</CardBody>
+								<CardFooter className={classes.cardFooter}>
+									<Button color="info" size="sm" href="#" target="_blank" disabled>
+										Github
+									</Button>
+									<Button color="primary" size="sm" href="http://nu-jurnal.web.id" target="_blank">
+										{' '}
+										Demo
+									</Button>
+								</CardFooter>
+							</Card>
+						</GridItem>
 					</GridContainer>
 				</div>
 			</div>
