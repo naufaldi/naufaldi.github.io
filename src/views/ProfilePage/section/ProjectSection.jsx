@@ -50,7 +50,7 @@ class ProjectSection extends React.Component {
 				<div>
 					<GridContainer justify="center">
 						<GridItem xs={12} sm={6} md={3}>
-							<Card>
+							<Card className={classes.cardSize}>
 								<img className={classes.imgCardTop} src={card1} alt="Card-img-cap" />
 								<CardBody>
 									<h4 className={classes.cardTitle}>Deliv Beta Landing Page</h4>
@@ -68,7 +68,7 @@ class ProjectSection extends React.Component {
 							</Card>
 						</GridItem>
 						<GridItem xs={12} sm={6} md={3}>
-							<Card>
+							<Card className={classes.cardSize}>
 								<img className={classes.imgCardTop} src={card1} alt="Card-img-cap" />
 								<CardBody>
 									<h4 className={classes.cardTitle}>CSS30</h4>
@@ -86,7 +86,7 @@ class ProjectSection extends React.Component {
 							</Card>
 						</GridItem>
 						<GridItem xs={12} sm={6} md={3}>
-							<Card>
+							<Card className={classes.cardSize}>
 								<img className={classes.imgCardTop} src={card1} alt="Card-img-cap" />
 								<CardBody>
 									<h4 className={classes.cardTitle}>30 Day JS</h4>
@@ -104,7 +104,7 @@ class ProjectSection extends React.Component {
 							</Card>
 						</GridItem>
 						<GridItem xs={12} sm={6} md={3}>
-							<Card>
+							<Card className={classes.cardSize}>
 								<img className={classes.imgCardTop} src={card1} alt="Card-img-cap" />
 								<CardBody>
 									<h4 className={classes.cardTitle}>Practice React + Material Design </h4>

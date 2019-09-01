@@ -7,7 +7,16 @@ const teamStyle = {
     textAlign: "center"
   },
   cardSize: {
-    height: "31.25rem"
+    height: "31.25rem",
+    "@media (max-width: 375px)": {
+      height: "31.25rem !important"
+    },
+    "@media (max-width: 475px)": {
+      height: "600px !important"
+    },
+    "@media (max-width: 768px)": {
+      height: "40rem !important"
+    }
   },
   title: {
     ...title,
